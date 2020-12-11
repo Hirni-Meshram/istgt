@@ -1,6 +1,8 @@
 language: c
-sudo: required
 dist: bionic
+group: edge
+virt: lxd
+sudo: true
 services:
   - docker
 
@@ -12,6 +14,10 @@ jobs:
         - RELEASE_TAG_DOWNSTREAM=1
     - os: linux
       arch: arm64
+      env:
+        - RELEASE_TAG_DOWNSTREAM=0
+    - os: linux
+      arch: arm64-graviton2
       env:
         - RELEASE_TAG_DOWNSTREAM=0
 
