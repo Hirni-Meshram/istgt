@@ -1,8 +1,8 @@
 language: c
+sudo: required
 dist: bionic
-group: edge
-virt: lxd
-sudo: true
+#group: edge
+#virt: lxd
 services:
   - docker
 
